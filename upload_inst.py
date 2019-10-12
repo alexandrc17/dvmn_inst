@@ -12,12 +12,10 @@ def resize_img(path): #ex.: "img/"
         image = Image.open(path+img)
         if image.width > image.height:
             coordinates = (image.width - image.height, 0, image.size[0], image.size[1])
-            cropped = image.crop(coordinates)
-            cropped.save(path+img)
         else:
             coordinates = (0, image.height - image.width, image.size[0], image.size[1])
-            cropped = image.crop(coordinates)
-            cropped.save(path + img)
+        cropped = image.crop(coordinates)
+        cropped.save(path + img)
 
 
 def upload_inst(path_image):
