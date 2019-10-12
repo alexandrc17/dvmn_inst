@@ -28,7 +28,6 @@ def upload_inst(path_image):
     for img in list_img:
         try:
             bot.upload_photo(path_image+img, caption="Elon Mask")
-            print("ok")
         except RuntimeError:
             continue
 
